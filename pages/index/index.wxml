@@ -9,7 +9,7 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-    <input value="{{motto}}" bindinput="setValue"></input>
-    <button bindtap="getValue">ok</button>
+    <input value="{{motto}}" bindinput="setValue"/>
+    <i-button type="primary" bind:click="getValue">这是一个按钮</i-button>
   </view>
 </view>

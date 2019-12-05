@@ -15,7 +15,6 @@ Page({
         })
     },
     getValue: function () {
-        wx.alert(this.data.motto)
         console.log(this.data.motto)
     },
     //事件处理函数

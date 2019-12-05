@@ -1,6 +1,21 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="">
+<!--  <block wx:for="{{logs}}" wx:for-item="log">-->
+<!--    <text class="log-item">{{index + 1}}. {{log}}</text>-->
+<!--  </block>-->
+  <i-cell-group>
+    <i-cell wx:for="{{logs}}" wx:for-item="log" title="{{index + 1}}">
+      <text class="log-item">{{log}}</text>
+    </i-cell>
+  </i-cell-group>
+  <i-cell-group>
+    <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+    <i-cell title="开关">
+      <i-switch slot="footer" value="{{switch1}}" size="large" bind:change="onChange">
+        <view slot="open">开启</view>
+        <view slot="close">关闭</view>
+      </i-switch>
+    </i-cell>
+  </i-cell-group>
 </view>
